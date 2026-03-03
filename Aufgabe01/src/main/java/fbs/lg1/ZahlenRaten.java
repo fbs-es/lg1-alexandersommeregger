@@ -1,20 +1,15 @@
 package fbs.lg1;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class ZahlenRaten {
 
-    public int generate() {
-        Random rand = new Random();
-        int rndm = rand.nextInt(100) + 1;
-        return rndm;
-    }
+    Scanner sc = new Scanner(System.in);
+    GenerateRNDM randomKlasse = new GenerateRNDM();
 
-    public void starten() {
-        int rndm = generate();
+    public void startenvsComputer() {
+        int rndm = randomKlasse.generate(100, 0);
         int count = 0;
-        Scanner sc = new Scanner(System.in);
         boolean nichtErraten = true;
         String rückmeldung = "";
 
@@ -24,7 +19,7 @@ public class ZahlenRaten {
             int eingabe = sc.nextInt();
 
             String nachricht = WarmKalt(eingabe, rndm);
-            int zahlZürückGebenInt = Zahlzurückgeben(rndm, eingabe);
+            int zahlZürückGebenInt = Zahlzurückgeben(eingabe, rndm);
 
             switch (zahlZürückGebenInt) {
 
@@ -46,7 +41,7 @@ public class ZahlenRaten {
         sc.close();
     }
 
-    public int Zahlzurückgeben(int rndm, int eingabe) {
+    public int Zahlzurückgeben(int eingabe, int rndm) {
         int zurückgeben = 0;
 
         if (eingabe < rndm)
@@ -58,6 +53,7 @@ public class ZahlenRaten {
     }
 
     public String WarmKalt(int eingabe, int rndm) {
+
         String nachricht = "kalt";
         int distanz = rndm - eingabe;
 
