@@ -19,11 +19,11 @@ public class Main {
                 rZ.startenvsComputer();
                 break;
             case "2":
-                cez.PlayerVsPC();
+                cez.playerVsPC();
                 break;
 
             case "3":
-                cez.SpielervsComputer();
+                cez.spielervsComputer();
                 break;
             case "4":
                 int i = gen.hälfteDerZahl(50, 40);
