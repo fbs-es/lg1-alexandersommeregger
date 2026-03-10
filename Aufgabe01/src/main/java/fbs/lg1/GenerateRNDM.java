@@ -11,7 +11,7 @@ public class GenerateRNDM {
     }
 
     public int hälfteDerZahl(int a, int b) {
-        int mitte = (a - b) / 2 + b;
+        int mitte = ((a + b) / 2);
         return mitte;
     }
 }

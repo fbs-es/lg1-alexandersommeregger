@@ -2,15 +2,14 @@ package fbs.lg1;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 import java.util.Scanner;
 
 public class ComputerErraetZahl {
 
     Scanner sc = new Scanner(System.in);
-    GenerateRNDM RandomKlasse = new GenerateRNDM();
+    GenerateRNDM randomKlasse = new GenerateRNDM();
 
-    public void SpielervsComputer() {
+    public void spielervsComputer() {
         List<Integer> zahlen = new ArrayList<>();
 
         int guessedNumber;
@@ -26,11 +25,11 @@ public class ComputerErraetZahl {
         while (true) {
 
             do {
-                rndm = RandomKlasse.generate(max, min);
+                rndm = randomKlasse.generate(max, min);
 
                 if (zahlen.size() >= 1) {
 
-                    guessedNumber = RandomKlasse.hälfteDerZahl(rndm, zahlen.get(indexListe));
+                    guessedNumber = randomKlasse.hälfteDerZahl(rndm, zahlen.get(indexListe));
                 }
 
             } while (zahlen.contains(rndm));
@@ -48,13 +47,11 @@ public class ComputerErraetZahl {
             String eingabePlusMinus = sc.nextLine();
 
             switch (eingabePlusMinus) {
-                case "plus":
-                case "+":
+                case "plus", "+":
                     min = rndm;
                     break;
 
-                case "minus":
-                case "-":
+                case "minus", "-":
                     max = rndm;
                     break;
 
@@ -65,7 +62,7 @@ public class ComputerErraetZahl {
         System.out.print("Der Computer hat die Zahl erraten: " + zuErratendeZahl + ".");
     }
 
-    public void PlayerVsPC() {
+    public void playerVsPC() {
 
         int guessedNumber;
         int max = 100;
@@ -77,7 +74,7 @@ public class ComputerErraetZahl {
 
         while (true) {
 
-            guessedNumber = RandomKlasse.hälfteDerZahl(max, min);
+            guessedNumber = randomKlasse.hälfteDerZahl(max, min);
 
             if (guessedNumber == zuErratendeZahl) {
                 break;
@@ -88,13 +85,11 @@ public class ComputerErraetZahl {
             String eingabePlusMinus = sc.nextLine();
 
             switch (eingabePlusMinus) {
-                case "plus":
-                case "+":
+                case "plus", "+":
                     min = guessedNumber;
                     break;
 
-                case "minus":
-                case "-":
+                case "minus", "-":
                     max = guessedNumber;
                     break;
 
