@@ -10,8 +10,7 @@ public class Main {
         GenerateRNDM gen = new GenerateRNDM();
 
         Scanner sc = new Scanner(System.in);
-        System.out
-                .print("1: Computer vs Spieler\n2: PlayerVsPc / 2\n3: Spieler vs Computer\n4: Mitte Rechner\nEingabe: ");
+        System.out.print("1: Computer vs Spieler\n2: PlayerVsPc\n3: Spieler vs Computer\n4: Mitte Rechner\nEingabe: ");
         String eingabeNutzer = sc.nextLine();
 
         switch (eingabeNutzer) {

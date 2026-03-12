@@ -19,7 +19,7 @@ class ZahlenRatenTest {
     @ParameterizedTest
     @CsvSource({
             "10, 2, kalt",
-            "10, 20, warm",
+            "10, 12, warm",
             "10, 10, heiß"
     })
     void TestWarmKalt(int rndm, int eingabe, String expected) {
