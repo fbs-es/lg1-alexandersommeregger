@@ -81,7 +81,8 @@ public class ComputerErraetZahl {
             }
 
             System.out
-                    .print("Der Computer hat die Zahl: " + guessedNumber + " geraten, Gib an ob plus, minus\nEingabe:");
+                    .println("Der Computer hat die Zahl: " + guessedNumber
+                            + " geraten, Gib an ob plus, minus\nEingabe:");
             String eingabePlusMinus = sc.nextLine();
 
             switch (eingabePlusMinus) {

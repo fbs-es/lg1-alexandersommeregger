@@ -11,7 +11,7 @@ public class ZahlenRaten {
         int rndm = randomKlasse.generate(100, 0);
         int count = 0;
         boolean nichtErraten = true;
-        String rückmeldung = "";
+        String rueckmeldung = "";
 
         while (nichtErraten) {
             count++;
@@ -24,19 +24,19 @@ public class ZahlenRaten {
             switch (zahlZürückGebenInt) {
 
                 case -1:
-                    rückmeldung = "Die eingegebene Zahl ist zu klein. Versuche: ";
+                    rueckmeldung = "Die eingegebene Zahl ist zu klein. Versuche: ";
                     break;
 
                 case 1:
-                    rückmeldung = "Die eingegebene Zahl ist zu groß. Versuche: ";
+                    rueckmeldung = "Die eingegebene Zahl ist zu groß. Versuche: ";
                     break;
 
                 default:
-                    rückmeldung = "Glückwunsch! Die Zahl war: " + rndm + ", Versuche: ";
+                    rueckmeldung = "Glückwunsch! Die Zahl war: " + rndm + ", Versuche: ";
                     nichtErraten = false;
                     break;
             }
-            System.out.println(rückmeldung + count + ", " + nachricht);
+            System.out.println(rueckmeldung + count + ", " + nachricht);
         }
         sc.close();
     }
